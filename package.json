@@ -7,8 +7,8 @@
   "scripts": {
     "commit": "cz-customizable",
     "dev": "next dev ",
-    "build": "next run build",
-    "lint": "next run lint",
+    "build": "next build",
+    "lint": "next lint",
     "start": "next start"
   },
   "dependencies": {
