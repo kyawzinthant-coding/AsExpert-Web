@@ -1,17 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { Providers } from "@/providers/Provider";
+import { QueryProviders } from "@/providers/QueryProvider";
+import NavPanel from "@/components/navigation/NavPanel";
 
 export const metadata: Metadata = {
   title: "Asexpert Assignment Helper App",
@@ -25,10 +17,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased min-h-screen w-full relative  font-nunito  light `}
       >
-        {children}
+        <QueryProviders>
+          <Providers>
+            <div className="absolute -left-3 top-[50%]">
+              <NavPanel />
+            </div>
+            {children}
+          </Providers>
+        </QueryProviders>
       </body>
     </html>
   );
