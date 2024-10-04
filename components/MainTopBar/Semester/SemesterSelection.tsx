@@ -9,12 +9,12 @@ const SemesterSelection = () => {
 
   return (
     <div
-      className={`border-2  ${fullSem == "" ? "border-dashed" : "border"}  px-4 rounded-md`}
+      className={`border-2   ${fullSem == "" ? "border-dashed" : "border"}  px-4 rounded-md`}
     >
       <button
         onClick={onOpen}
         aria-label="select-semester-btn"
-        className="p-4 text-bold cursor-pointer  text-lg font-medium"
+        className="p-4 text-bold cursor-pointer  text-lg font-medium  "
       >
         {fullSem == "" ? "Select Semester" : fullSem}
       </button>

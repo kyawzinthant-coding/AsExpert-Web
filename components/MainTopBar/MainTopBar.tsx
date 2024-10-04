@@ -5,7 +5,7 @@ import AssignmentPicker from "./Assignment/AssignmentPicker";
 
 const MainTopBar = () => {
   return (
-    <div className="flex items-center gap-12 flex-row justify-between">
+    <div className="flex  items-center gap-12 flex-row justify-between">
       <div>
         <Image
           alt="logo"
@@ -19,7 +19,7 @@ const MainTopBar = () => {
       <div>
         <SemesterSelection />
       </div>
-      <div>
+      <div className="">
         <AssignmentPicker />
       </div>
     </div>
